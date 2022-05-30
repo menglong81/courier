@@ -1,0 +1,104 @@
+/* 
+   Generates the negative triangle as part of a offset with :before and :after
+
+   $location: Where you want the negative triangle [top, right, bottom, left]
+
+   $position: In percentage where the negative triangle should be placed. With 50% the cut out triangle is in the center.
+
+   $size: How much will the surface be extruded in order to cut out the triangle. Can be any valid size (px, em, rem, % etc.)
+
+   $color: The color of the extruded part where the triangle gets cut out
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container {
+
+}
+.container > .folder {
+  width: 220px;
+  height: 120px;
+  left: calc(50% - 110px);
+  margin-top: 90px;
+  position: absolute;
+}
+.container > .folder > .cover {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fab62f;
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 10px 10px;
+  -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+}
+.container > .folder > .cover:before, .container > .folder > .cover:after {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100px;
+  border: 50px solid transparent;
+}
+.container > .folder > .cover:before {
+  left: 0;
+  width: 50%;
+  border-left: none;
+  border-bottom-color: #fab62f;
+}
+.container > .folder > .cover:after {
+  right: 0;
+  width: 50%;
+  border-right: none;
+  border-bottom-color: #fab62f;
+}
+.container > .folder > .cover > .title {
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.1);
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  /*-webkit-transform: rotate(20deg);*/
+  /*transform: rotate(20deg);*/
+}
+.container > .folder > .paper {
+  opacity: 1;
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+  top: calc(50% - 150px);
+  left: calc(50% - 100px);
+  transition: top 0.5s, opacity 0.4s;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 0.1em;
+  padding: 1em;
+  color: #644812;
+  background-color: #fde1ab;
+  -moz-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.container > .folder:hover > .paper {
+  top: calc(50% - 200px);
+}
+.container > .folder.opened > .paper {
+  top: calc(-500px);
+  opacity: 0;
+}

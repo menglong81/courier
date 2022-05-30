@@ -1,0 +1,18 @@
+{
+  "name": "simple-crop",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "NewYoung <657851574@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/newbieYoung/Simple-Crop",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

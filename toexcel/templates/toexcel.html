@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>django-toexcel</title>
+     {% load static %}
+</head>
+<body>
+<table style="display: none" id="info" file_name="{{ name }}">
+      <thead>
+        <tr>
+            {% for tl in title %}
+                 <th>{{ tl }}</th>
+            {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+          {% for value in table %}
+            <tr>
+                {% for v in value %}
+                    <td>{{ v }}</td>
+                {% endfor %}
+            </tr>
+          {% endfor %}
+      </tbody>
+</table>
+<div style="text-align: center">
+    <p>If your download does not start automatically, please <a href="javascript:export_excel()">click here</a></p>
+</div>
+<script src="{% static '/toexcel/jquery-2.1.4.js' %}"></script>
+<script src="{% static '/toexcel/jquery.table2excel.js' %}"></script>
+<script src="{% static '/toexcel/format.js' %}"></script>
+<script>
+export_excel();
+function export_excel() {
+    var file_name = $('#info').attr('file_name');
+    var today = new Date();
+    $("table").table2excel({
+        exclude: ".noExl",
+        name: "Excel Document",
+        filename: "${file_name}-${date}.xls".format({'date': today.toLocaleDateString(), 'file_name': file_name}),
+        exclude_img: true,
+        exclude_links: true,
+        exclude_inputs: true
+    });
+}
+</script>
+
+</body>
+</html>

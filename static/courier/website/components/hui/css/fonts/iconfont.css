@@ -1,0 +1,11 @@
+/* Webfont: hui-iconfont */@font-face {
+    font-family: 'hui-iconfont';
+    src: url('iconfont.eot'); /* IE9 Compat Modes */
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('iconfont.woff') format('woff'), /* Modern Browsers */
+         url('iconfont.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

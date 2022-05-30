@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+{#<meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+
+<meta name="description" content="{{ seo }}">
+
+<link rel="stylesheet" href="{% static '/website/components/jqueryweui/lib/weui.min.css' %}">
+<link rel="stylesheet" href="{% static '/website/components/jqueryweui/css/jquery-weui.css' %}">
+<link rel="stylesheet" href="{% static '/website/components/jqueryweui/demos.css' %}">
+  <!-- Icons -->
+<link href="{% static '/website/components/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+{% block css %}{% endblock %}
+
+  </head>
+
+  <body ontouchstart>
+<div class="weui-tab">
+
+
+
+    <div class="weui-tab__panel">
+        {% block navbar %}{% endblock %}
+        {% block continer %}{% endblock %}
+{#        <div id="{{ tab }}" class="weui-tab__bd-item weui-tab__bd-item--active">#}
+{#              #}
+{#        </div>#}
+    </div>
+</div>
+
+    <script src="{% static '/website/components/jqueryweui/lib/jquery-2.1.4.js' %}"></script>
+    <script src="{% static '/website/components/jqueryweui/js/jquery-weui.js' %}"></script>
+    <script src="{% static '/website/components/jqueryweui/lib/fastclick.js' %}"></script>
+    <script src="{% static '/website/components/format/format.js' %}"></script>
+    <script src="{% static '/website/components/jqueryweui/modify_prompt.js' %}"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
+{% block js %}{% endblock %}
+  </body>
+</html>

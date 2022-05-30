@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>总览</title>
+{#    <script src="jquery.min.js"></script>#}
+    <script type="text/javascript" src="{% static '/ticket/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/metrics/echarts.min.js' %}"></script>
+
+  </head>
+  <body>
+    <div id="main1" style="width: 100%;height:600px;"></div>
+    <div id="main2" style="width: 100%;height:600px;"></div>
+    <script type="text/javascript">
+      $(function(){
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        $.ajax({
+          url : '/courier/ticket/get_most_ticket_type',
+          type : 'get',
+          data : {},
+          success : function(res){
+            var data = $.parseJSON(res);
+
+            option1 = {
+              title: {
+                text: '工单统计-最多的10个工单类型',
+                subtext: '',
+                left: 'center'
+              },
+              tooltip: {
+                trigger: 'item'
+              },
+              legend: {
+                orient: 'vertical',
+                left: 'left'
+              },
+              series: [
+                {
+                  name: 'Access From',
+                  type: 'pie',
+                  radius: '50%',
+                  data: data.data.metric_context,
+                  emphasis: {
+                    itemStyle: {
+                      shadowBlur: 10,
+                      shadowOffsetX: 0,
+                      shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                  }
+                }
+              ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart1.setOption(option1);
+
+          }
+        });
+
+    
+
+      var myChart2 = echarts.init(document.getElementById('main2'));
+      $.ajax({
+          url : '/courier/ticket/get_top10_longtime_ticket',
+          type : 'get',
+          data : {},
+          success : function(res){
+            var data = $.parseJSON(res);
+
+            var arr = [];
+            for(i in data.data.metric_context){
+              arr.push(data.data.metric_context[i].name)
+            }
+            var arr2 = [];
+            for(i in data.data.metric_context){
+              arr2.push(data.data.metric_context[i].value)
+            }
+
+            option2 = {
+              title: {
+                text: '工单统计-耗时最长的10个工单',
+                subtext: '',
+                left: 'center'
+              },
+              xAxis: {
+                type: 'category',
+                axisLabel : {
+                  interval:0
+                },
+                data: arr
+              },
+              yAxis: {
+                name: "(单位: )秒",
+                type: 'value'
+              },
+              series: [
+                {
+                  data:arr2,
+                  type: 'bar',
+                  showBackground: true,
+                  barWidth: 30,
+                  backgroundStyle: {
+                    color: 'rgba(180, 180, 180, 0.2)'
+                  }
+                }
+              ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart2.setOption(option2);
+
+          }
+        });
+      })
+    </script>
+  </body>
+</html>

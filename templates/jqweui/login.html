@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>用户登陆</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta name="description" content="dev_login">
+
+<link rel="stylesheet" href="{% static '/website/components/jqueryweui/lib/weui.min.css' %}">
+<link rel="stylesheet" href="{% static '/website/components/jqueryweui/css/jquery-weui.css' %}">
+<link rel="stylesheet" href="{% static '/website/components/jqueryweui/demos.css' %}">
+  <!-- Icons -->
+<link href="{% static '/website/components/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+  </head>
+
+  <body ontouchstart>
+  <header class='demos-header'>
+      <h1 class="demos-title">用户登陆</h1>
+ </header>
+<div class="demos-content-padded">
+  <form method="post" >
+       {% csrf_token %}
+        <div class="weui-cells weui-cells_form">
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">用户名</label></div>
+                <div class="weui-cell__bd">
+                  <input class="weui-input" type="text" name="user" placeholder="请输入用户名">
+                </div>
+              </div>
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
+                <div class="weui-cell__bd">
+                  <input class="weui-input" type="password" name="password" placeholder="请输入密码">
+                </div>
+              </div>
+        </div>
+        <button class="weui-btn weui-btn_plain-primary" type="submit" onclick='login()' style="margin-top: 30%">登陆</button>
+  </form>
+</div>
+
+    <script src="{% static '/website/components/jqueryweui/lib/jquery-2.1.4.js' %}"></script>
+    <script src="{% static '/website/components/jqueryweui/js/jquery-weui.js' %}"></script>
+    <script src="{% static '/website/components/jqueryweui/lib/fastclick.js' %}"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
+  <script>
+      msg = "{{ msg }}";
+      if (msg.length > 0){
+          $.alert(msg);
+      }
+  </script>
+  </body>
+</html>

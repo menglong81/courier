@@ -1,0 +1,322 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>镜像站@Layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+{#  <link rel="stylesheet" href="./layui/css/layui.css" media="all">#}
+      <link rel="stylesheet" href="{% static '/ticket/layui/css/layui.css' %}">
+
+  <style type="text/css">
+    input[disabled]{color:#999;opacity:.7}
+    #kuiz_box{display: }
+  </style>
+</head>
+<body>
+
+
+<form class="layui-form" action="" lay-filter="searchForm" style="padding-top:30px">
+  <input type="hidden" id="typeNameIpt" value="">
+  <input type="hidden" id="ticketTitleIpt" value="">
+  <div class="searchBox" style="display: none">
+    <select class="hideBox"></select>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">工单类型</label>
+    <div class="layui-input-inline">
+      <select name="type_name" class="type_name_box" lay-filter="type_name_box">
+        <option value="0">请选择</option>
+      </select>
+    </div>
+    <label class="layui-form-label">工单名称</label>
+    <div class="layui-input-inline">
+      <select name="ticket_title" class="ticket_title">
+        <option value="0">请选择</option>
+      </select>
+    </div>
+    <div class="layui-input-inline">
+      <button type="submit" class="layui-btn" lay-submit="" lay-filter="searchBtn">查询</button>
+    </div>
+  </div>
+</form>
+
+<form class="layui-form" action="" lay-filter="queryTicketType" id="queryTicketType">
+  <input id="userId" type="hidden" value={{user}}>
+  <div class="layui-form-item">
+    <label class="layui-form-label">工单类型</label>
+    <div class="layui-input-block">
+      <input type="text" name="ticket_type" lay-verify="title" autocomplete="off" placeholder="请输入工单类型" class="layui-input" id="typeNameData" disabled>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">工单名称</label>
+    <div class="layui-input-block">
+      <input type="text" name="ticket_title" placeholder="请输入工单名称" autocomplete="off" class="layui-input" id="ticketTitleData" disabled>
+    </div>
+  </div>
+
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">工单描述</label>
+    <div class="layui-input-block">
+      <textarea placeholder="请输入内容" class="layui-textarea" name="detail"></textarea>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">工单负责组</label>
+    <div class="layui-input-block" id="userBox">
+    </div>
+  </div>
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">帮助信息</label>
+    <div class="layui-input-block">
+      <textarea placeholder="请输入帮助信息" class="layui-textarea helpInfo" name="helper" style="font-weight:bold;-webkit-text-fill-color: #f00;" disabled></textarea>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">自动化</label>
+    <div class="layui-input-block">
+      <input type="checkbox" id="isAuto" name="is_auto" value="" lay-skin="switch" lay-filter="switchTest" lay-text="ON|OFF" disabled>
+    </div>
+  </div>
+  <div class="layui-form-item layui-form-text" id="kuiz_box" style="display: ;">
+    <label class="layui-form-label">扩展字段</label>
+    <div class="layui-input-block addListBox">
+
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+    </div>
+  </div>
+</form>
+
+<script type="text/javascript" src="{% static '/ticket/layui/layui.js' %}"></script>
+<script type="text/javascript" src="{% static '/ticket/jquery.min.js' %}"></script>
+
+<!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
+<script>
+layui.use(['form', 'layedit', 'laydate'], function(){
+  var form = layui.form
+  ,layer = layui.layer
+  ,layedit = layui.layedit
+  ,laydate = layui.laydate;
+
+
+  addOptions()
+
+ form.on('select(type_name_box)', function (data) {
+        var p = $(".type_name_box").val();
+        $(".ticket_title").html("");
+
+        $(".hideBox").find("option").each(function(i,e){
+          if($(e).attr("pid")==p){
+            $(".ticket_title").append($(e).clone())
+            form.render();
+          }
+        })
+    });
+
+
+ //自定义验证规则
+  // form.verify({
+  //   title: function(value){
+  //     if(value.length < 5){
+  //       return '标题至少得5个字符啊';
+  //     }
+  //   }
+  //   ,content: function(value){
+  //     layedit.sync(editIndex);
+  //   }
+  // });
+
+  //监听指定开关
+  form.on('switch(switchTest)', function(data){
+  	var isAuto = this.checked ? 'ture' : 'false';
+  	if(isAuto=="ture"){
+  		$("#kuiz_box").show();
+  	}else{
+  		$("#kuiz_box").hide();
+  	}
+  });
+
+
+  $("#addListBtn").click(function(){
+  	var html='<div class="layui-input-block addListBox">'+
+			    '<div class="layui-inline">'+
+			      '<div class="layui-input-inline">'+
+			        '<input type="text" name="" autocomplete="off" class="layui-input keyIpt" value="" placeholder="请输入Key">'+
+			      '</div>'+
+			      '<div class="layui-input-inline">'+
+			        '<input type="text" name="" autocomplete="off" class="layui-input valIpt" value="" placeholder="请输入Value">'+
+			      '</div>'+
+			    '</div>'+
+		    '</div>';
+
+  	$(this).parents(".addListParent").before(html);
+  })
+
+  $("#moveListBtn").click(function(){
+  	if($(".addListBox").length>1){
+  		$(".addListBox").last().remove();
+  	}else{
+  		return false;
+  	}
+  })
+
+
+  //监听提交
+  var arr= [];
+  var eleObj= {};
+  var user="";
+  form.on('submit(demo1)', function(data){
+    var data = form.val('queryTicketType');
+
+    if($("#isAuto").is(':checked')){
+      data.is_auto =0;
+    }else{
+      data.is_auto =1;
+    }
+    data.create_by = $("#userId").val();
+    $(".addListBox").each(function(i,e){
+	    var str = $(e).find(".keyIpt").val();
+	    var val = $(e).find(".valIpt").val();
+	    if(val!="" && str!=""){
+		    eleObj={
+		    	host:str,
+		    	arg:val
+		    }
+		    arr.push(eleObj)
+	    }
+    })
+    data.extra_params=JSON.stringify(arr);
+  	$.ajax({
+          url : '/courier/ticket/add_ticket',
+          type : 'post',
+          data : JSON.stringify(data),
+          success : function(res){
+                layer.msg("提交成功");
+                setTimeout(function(){
+                  window.location.href = '/courier/admin/app_ticket/ticket';
+                  {#window.location.reload();#}
+                },1000)
+          }
+  	});
+
+    return false;
+  });
+
+  form.on('submit(searchBtn)', function(data){
+    // console.log($("#typeNameIpt").val()==$(".type_name_box").val())
+
+    // $("#typeNameIpt").val($(".type_name_box").val());
+    // $("#ticketTitleIpt").val($(".ticket_title").val());
+
+
+    var data = form.val('searchForm');
+    if(data.type_name=="标准模板"){
+      $("#typeNameData").removeAttr("disabled");
+      $("#ticketTitleData").removeAttr("disabled");
+    }else{
+      $("#typeNameData").attr("disabled","disabled");
+      $("#ticketTitleData").attr("disabled","disabled");
+    }
+
+    if($(".type_name_box").val()==0){
+      layer.msg("请选择查询条件");
+    }else{
+
+    $.ajax({
+          url : '/courier/ticket/query_ticket_type',
+          type : 'get',
+          data :{
+            type_name:data.type_name,
+            ticket_title:data.ticket_title
+          },
+          success : function(res){
+            // var res = {"status": "ok", "msg": "ok", "data": {"ticket_type_context": [{"type_name": "\u76d1\u63a7\u6a21\u677f", "ticket_title": "\u65b0\u589e2", "desc": "\u65b0\u589elocation", "is_auto": 0, "helper": "\u8bf7\u4e25\u683c\u6309\u7167\u6a21\u677f\u586b\u5199{'host': 'xxx', 'arg': 'xyz'}", "extra_params": "{\"host\": \"xxx\", \"arg\": \"xyz\"}", "handle_user": ["sre", "op", "net"]}], "message": "", "status": 0, "query_result": {}}}
+              var data = $.parseJSON(res);
+              form.val('queryTicketType', {
+                "ticket_type": data.data.ticket_type_context[0].type_name // "name": "value"
+                ,"ticket_title": data.data.ticket_type_context[0].ticket_title
+                ,"detail": data.data.ticket_type_context[0].desc
+                ,"helper": data.data.ticket_type_context[0].helper
+                ,"is_auto":  data.data.ticket_type_context[0].is_auto==1?0:1
+              });
+
+              if(data.data.ticket_type_context[0].is_auto==1){
+                $("#kuiz_box").hide();
+              }else{
+                $("#kuiz_box").show();
+              }
+              var handle_users = data.data.ticket_type_context[0].handle_user;
+              $("#userBox").html("");
+              for(i in handle_users){
+                $("#userBox").append('<input type="checkbox" checked="checked" disabled title="'+handle_users[i]+'" class="handleUser" value="'+handle_users[i]+'">');
+              }
+
+              if(data.data.ticket_type_context[0].extra_params!=""){
+                var extras = $.parseJSON(data.data.ticket_type_context[0].extra_params);
+                var html="";
+                $(".addListBox").html("");
+                for(var i in extras){
+                  html+='<div class="layui-input-block" style="margin:0">'+
+                            '<div class="layui-inline">'+
+                              '<div class="layui-input-inline">'+
+                                '<input type="text" name="" autocomplete="off" class="layui-input keyIpt" value="'+extras[i].host+'" placeholder="请输入Key">'+
+                              '</div>'+
+                              '<div class="layui-input-inline">'+
+                                '<input type="text" name="" autocomplete="off" class="layui-input valIpt" value="'+extras[i].arg+'" placeholder="请输入Value">'+
+                              '</div>'+
+                            '</div>'+
+                          '</div>';
+                }
+
+              $(".addListBox").append(html);
+              }
+
+            form.render();
+
+          }
+    });
+    }
+
+    return false;
+  });
+
+});
+
+function addOptions(){
+   $.ajax({
+    url: '/courier/ticket/query_select_value',
+    type:"get",
+    dataType: "json",
+    data:{},
+    success: function(res){
+      // var res = {"status": "ok", "msg": "ok", "data": {"ticket_type_context": [], "message": "", "status": 0, "query_result": {"\u6807\u51c6\u6a21\u677f": ["\u6807\u51c6\u6a21\u677f123"], "NGINX\u6a21\u677f": ["\u65b0\u589elocation"], "\u76d1\u63a7\u6a21\u677f": ["\u65b0\u589e1", "\u65b0\u589e2"], "\u5b89\u88c5\u6a21\u677f": ["\u65b0\u589e2"], "111111": ["222"], "111312": ["2"], "\u6700\u65b0\u6d4b\u8bd5\u529f\u80fd": ["1"], "\u5fae\u521b\u624b\u672f\u4e1c\u65b9\u996d\u5e97": ["1"]}}}
+
+      var p = res.data.query_result;
+
+      for(i in p){
+        $(".type_name_box").append('<option value="'+i+'">'+i+'</option>');
+        if(p[i].length>1){
+          for(var j=0;j<p[i].length;j++){
+            $(".hideBox").append('<option pid="'+i+'" value="'+p[i][j]+'">'+p[i][j]+'</option>');
+          }
+        }else{
+          $(".hideBox").append('<option pid="'+i+'" value="'+p[i]+'">'+p[i]+'</option>');
+        }
+
+      }
+      layui.form.render("select");
+    }
+  });
+}
+</script>
+
+</body>
+</html>

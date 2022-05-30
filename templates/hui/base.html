@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>{{ title }}</title>
+<link type="text/css" rel="stylesheet" href="{% static '/website/components/hui/css/hui.css?v=20191106' %}" />
+<link rel="stylesheet" href="{% static '/website/components/jqueryweui/lib/weui.min.css' %}">
+
+<link href="{% static '/website/components/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="{% static '/website/components/jqueryweui/css/jquery-weui.css' %}">
+<style>
+    #hui-footer .fa {
+        color: #555555;
+    }
+    .weui-toast_content{
+        color: #ffffff;
+    }
+    #hui-select-beautify{
+        display: none;
+    }
+    #hui-load-more{
+        display: none;
+    }
+    .back_button{
+        z-index: 20;
+    }
+    .back_button i{
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 17px;
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        z-index: 20;
+    }
+</style>
+
+<style type="text/css">
+/* 标签颜色改变 #993333*/
+.greenTags > div{border-color:#31A990; color:#31A990;}
+.redTags > div{border-color:red; color:red;font-weight:bold}
+.grayTags > div{border-color:#aaaaaa; color:#aaaaaa;}
+</style>
+
+{% block css %}{% endblock %}
+</head>
+<body>
+{% if header == 'false' %}
+{% else %}
+<header class="hui-header">
+    {% block header %}{% endblock %}
+{% if hide_back_button %}
+{% else %}
+    <div class="back_button" onclick="javascript:location.href='/{#APP_NAME#}/website/index.html'"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+{% endif %}
+    <h1>{{ title }}</h1>
+</header>
+{% endif %}
+<div class="hui-wrap">
+{% block continer %}{% endblock %}
+
+{#    <div id="refreshContainer" class="hui-refresh">#}
+{#            <!-- hui-refresh-icon 为下拉动画展示区域 -->#}
+{#            <div class="hui-refresh-icon"></div>#}
+{#            <div class="hui-refresh-content">#}
+{#                <!-- 内容展示区域 -->#}
+{#                #}
+{#            </div>#}
+{#    </div>#}
+</div>
+
+
+<!-- hui -->
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui.js?v=2019111902' %}"></script>
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui-form.js' %}"></script>
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui-touch-pwd.js' %}"></script>
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui-image-cuter.js' %}"></script>
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui-swipe.js' %}"></script>
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui-tab.js' %}"></script>
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui-picker.js' %}"></script>
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui-select-beautify.js' %}"></script>
+<script type="text/javascript" src="{% static '/website/components/hui/js/hui-refresh-load-more.js' %}"></script>
+
+<!-- jquery weui -->
+<script src="{% static '/website/components/jqueryweui/lib/jquery-2.1.4.js' %}"></script>
+<script src="{% static '/website/components/jqueryweui/js/jquery-weui.js' %}"></script>
+<script src="{% static '/website/components/jqueryweui/modify_prompt.js' %}"></script>
+<script src="{% static '/website/components/format/format.js' %}"></script>
+<script>
+/* 加载动画 */
+/*
+$(function(){
+    hui.loading('正在加载中');
+});
+document.onreadystatechange = loadingChange;
+    function loadingChange()
+    {
+        if(document.readyState == "complete"){ //当页面加载状态为完全结束时进入
+            hui.closeLoading();//当页面加载完成后将loading页隐藏
+        }
+    }
+*/
+</script>
+
+<script type="text/javascript">
+    /* 下拉刷新 */
+    /*
+    var refresh_count = 0;
+    hui.refresh('#refreshContainer', refresh);
+    function refresh(){
+        console.log(refresh_count);
+        if (refresh_count === 0){
+            refresh_count += 1;
+            hui.endRefresh();
+        }else{
+            window.location.reload()
+        }
+
+    }
+    */
+</script>
+
+{% block js %}{% endblock %}
+
+<script type="text/javascript" src="{% static '/website/components/wechat/jweixin-1.6.0.js' %}"></script>
+<script type="text/javascript">
+    WX_TITLE = "{{ title }}";
+    WX_LINK = document.URL;
+    WX_IMGURL = "{{ wx_share_img }}";
+    WX_DESC = "{{ wx_share_desc }}";
+
+    function Create_WX_Share(appId, timestamp, nonceStr, signature) {
+       console.log(WX_TITLE, WX_LINK, WX_IMGURL, WX_DESC, appId, timestamp, nonceStr, signature);
+       wx.config({
+           debug: false,  //调式模式，设置为ture后会直接在网页上弹出调试信息，用于排查问题
+           appId: appId,
+           timestamp: timestamp,
+           nonceStr: nonceStr,
+           signature: signature,
+           jsApiList: [  //需要使用的网页服务接口
+               'checkJsApi',  //判断当前客户端版本是否支持指定JS接口
+               'onMenuShareTimeline', //分享给好友
+               'onMenuShareAppMessage', //分享到朋友圈
+               'onMenuShareQQ',  //分享到QQ
+               'onMenuShareWeibo' //分享到微博
+           ]
+        });
+
+
+        wx.ready(function () {   //ready函数用于调用API，如果你的网页在加载后就需要自定义分享和回调功能，需要在此调用分享函数。//如果是微信游戏结束后，需要点击按钮触发得到分值后分享，这里就不需要调用API了，可以在按钮上绑定事件直接调用。因此，微信游戏由于大多需要用户先触发获取分值，此处请不要填写如下所示的分享API
+                // 1 判断当前版本是否支持指定 JS 接口，支持批量判断
+            wx.checkJsApi({
+                jsApiList: [
+                  'onMenuShareAppMessage', 'onMenuShareTimeline', 'onMenuShareQQ'
+                ],
+                success: function (res) {
+                   // alert(JSON.stringify(res));
+                }
+            });
+            wx.onMenuShareTimeline({            //例如分享到朋友圈的API
+               title: WX_TITLE,                 // 分享标题
+               link: WX_LINK,              // 分享链接
+               imgUrl: WX_IMGURL, // 分享图标
+               success: function () {
+                   // 用户确认分享后执行的回调函数
+                   //alert('分享成功')
+               },
+               cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                   //alert('取消分享')
+               }
+            });
+            wx.onMenuShareAppMessage({
+                title: WX_TITLE, // 分享标题
+                desc: WX_DESC, // 分享描述
+                link: WX_LINK, // 分享链接
+                imgUrl: WX_IMGURL, // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    //alert('分享成功')
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                    //alert('取消分享')
+                }
+            });
+            wx.onMenuShareQQ({
+                title: WX_TITLE, // 分享标题
+                desc: WX_DESC, // 分享描述
+                link: WX_LINK, // 分享链接
+                imgUrl: WX_IMGURL, // 分享图标
+                success: function () {
+                   // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                   // 用户取消分享后执行的回调函数
+                }
+            });
+        });
+
+        wx.error(function (res) {
+            alert('res.errMsg: ' + res.errMsg);  //打印错误消息。及把 debug:false,设置为debug:ture就可以直接在网页上看到弹出的错误提示
+            alert('res: ' + res)
+        });
+    }
+
+    function init() {
+        $.ajax({
+            url: '/{#APP_NAME#}/usercenter/get_js_api_info',
+            type: 'GET',
+            data: {'url': document.URL},
+            success: function (data) {
+                var ret = JSON.parse(data);
+                if (ret['status'] !== 'ok'){
+                    console.log('获取微信api错误');
+                    return false
+                }
+                Create_WX_Share(ret['data']['app_id'],
+                    ret['data']['timestamp'],
+                    ret['data']['noncestr'],
+                    ret['data']['signature'])
+            }
+        })
+    }
+    // init();
+
+
+</script>
+</body>
+</html>
