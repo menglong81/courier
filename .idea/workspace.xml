@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ebd8f3a-55fa-45a5-b83d-8043a12c6b55" name="Default Changelist" comment="" />
+    <list default="true" id="3ebd8f3a-55fa-45a5-b83d-8043a12c6b55" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app_ticket/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_ticket/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ticket/createtask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket/createtask.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,35 +134,46 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="914397271">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="bk" value="1" />
+          <entry key="html" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="2" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="74" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="74" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/main.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/resp_json.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/middleware.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2816">
-              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-end-line="12" />
+            <state relative-caret-position="297">
+              <caret line="11" column="22" selection-start-line="11" selection-end-line="12" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DjangoProject/footcar_wsgi.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -169,24 +184,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_ticket/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6210">
-              <caret line="230" column="42" selection-start-line="230" selection-start-column="42" selection-end-line="230" selection-end-column="42" />
+            <state relative-caret-position="194">
+              <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1653826623280" expanded="true" signature="716:734" ph="..." />
-                <marker date="1653826623280" expanded="true" signature="1050:1059" ph="..." />
-                <marker date="1653826623280" expanded="true" signature="1063:1072" ph="..." />
-                <marker date="1653826623280" expanded="true" signature="7005:7014" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ticket/add_ticket.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-227">
+              <caret line="98" column="66" selection-start-line="98" selection-end-line="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/ticket/createtask.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="173" selection-start-line="173" selection-end-line="183" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ticket/createtask.html.bk">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjangoProject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2078">
-              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="3429">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
               <folding>
                 <element signature="e#314#323#0" expanded="true" />
               </folding>
@@ -197,7 +231,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjangoProject/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
+            <state relative-caret-position="540">
               <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding>
                 <element signature="e#637#669#0" expanded="true" />
@@ -210,16 +244,16 @@
         <entry file="file://$PROJECT_DIR$/common/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_ticket/tools/rabbitmq.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="135" column="37" lean-forward="true" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
+            <state relative-caret-position="428">
+              <caret line="127" column="13" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
               <folding>
                 <element signature="e#121#132#0" expanded="true" />
               </folding>
@@ -239,9 +273,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dist</find>
-      <find>render_t</find>
-      <find>groups</find>
       <find>OPS工单系统</find>
       <find>js</find>
       <find>xiaojiao</find>
@@ -269,6 +300,9 @@
       <find>site_domain</find>
       <find>from common.log import MAIN_LOG</find>
       <find>LOG</find>
+      <find>footcar</find>
+      <find>extra</find>
+      <find>keyIpt</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -278,6 +312,9 @@
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -299,7 +336,6 @@
         <option value="$PROJECT_DIR$/app_ticket/test/req.py" />
         <option value="$PROJECT_DIR$/templates/hui/base.html" />
         <option value="$PROJECT_DIR$/templates/ticket/index.html" />
-        <option value="$PROJECT_DIR$/templates/ticket/createtask.html" />
         <option value="$PROJECT_DIR$/templates/ticket/add_ticket.html" />
         <option value="$PROJECT_DIR$/app_ticket/models.py" />
         <option value="$USER_HOME$/Downloads/echarts-5.3.2/test/pie-calculable.html" />
@@ -313,11 +349,12 @@
         <option value="$PROJECT_DIR$/templates/metrics/echarts.html" />
         <option value="$PROJECT_DIR$/app_ticket/tools/__init__.py" />
         <option value="$PROJECT_DIR$/app_ticket/lib/ticket.py" />
-        <option value="$PROJECT_DIR$/app_ticket/admin.py" />
         <option value="$PROJECT_DIR$/DjangoProject/urls.py" />
         <option value="$PROJECT_DIR$/DjangoProject/settings.py" />
         <option value="$PROJECT_DIR$/conf/main.conf" />
         <option value="$PROJECT_DIR$/app_ticket/tools/rabbitmq.py" />
+        <option value="$PROJECT_DIR$/app_ticket/admin.py" />
+        <option value="$PROJECT_DIR$/templates/ticket/createtask.html" />
       </list>
     </option>
   </component>
@@ -329,15 +366,16 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/static/footcar/website/components/Simple-Crop-master/package.json" />
+      <path value="$PROJECT_DIR$/static/courier/website/components/Simple-Crop-master/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="493" />
-    <option name="y" value="25" />
+    <option name="x" value="251" />
+    <option name="y" value="113" />
     <option name="width" value="2315" />
     <option name="height" value="1230" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -347,19 +385,19 @@
         <subPane>
           <expand>
             <path>
-              <item name="footcar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="footcar" type="462c0819:PsiDirectoryNode" />
+              <item name="courier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courier" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="footcar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="footcar" type="462c0819:PsiDirectoryNode" />
-              <item name="app_ticket" type="462c0819:PsiDirectoryNode" />
+              <item name="courier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courier" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="footcar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="footcar" type="462c0819:PsiDirectoryNode" />
-              <item name="app_ticket" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="courier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courier" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ticket" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -376,16 +414,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app_ticket" />
-      <recent name="$PROJECT_DIR$/static/footcar/metrics" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/ticket" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/templates/echat/lib" />
       <recent name="$PROJECT_DIR$/templates/echat" />
       <recent name="$PROJECT_DIR$/static/footcar/ticket" />
-      <recent name="$PROJECT_DIR$/templates/ticket" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app_ticket" />
+      <recent name="$PROJECT_DIR$/static/footcar/metrics" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -519,12 +557,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="493" y="25" width="2315" height="1230" extended-state="0" />
+    <frame x="251" y="113" width="2315" height="1230" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15178178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15310162" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" weight="0.32972974" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32837406" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31989247" />
@@ -533,11 +571,12 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3296328" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.36827958" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36827958" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32978722" />
+      <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32972974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -574,13 +613,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_ticket/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1199943126/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -588,13 +620,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ticket/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ticket/index.html" />
     <entry file="file://$PROJECT_DIR$/simpleui/templates/admin/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -603,26 +629,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ticket/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ticket/js/layui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/layui.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ticket/js/layui.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/layui.js" />
     <entry file="file://$PROJECT_DIR$/templates/hui/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
@@ -630,44 +642,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/css/layui.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/js/layui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/footcar/ticket/js/layui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret column="162" lean-forward="true" selection-start-column="162" selection-end-column="162" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/footcar/website/admin/simpleui-x/elementui/element-ui.common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1727">
-          <caret line="22438" selection-start-line="22438" selection-end-line="22438" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/css/layui.css" />
+    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/js/layui.js" />
+    <entry file="file://$PROJECT_DIR$/static/footcar/ticket/js/layui.js" />
+    <entry file="file://$PROJECT_DIR$/static/footcar/website/admin/simpleui-x/elementui/element-ui.common.js" />
+    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/js/jquery.min.js" />
     <entry file="file://$USER_HOME$/Downloads/echarts-5.3.2/test/lib/config.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -681,24 +660,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lit">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lit" />
     <entry file="file://$PROJECT_DIR$/app_ticket/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/echat/lib/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/echat/pie-calculable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/echat/lib/config.js" />
+    <entry file="file://$PROJECT_DIR$/templates/echat/pie-calculable.html" />
     <entry file="file://$USER_HOME$/Downloads/echarts-5.3.2/test/pie-calculable.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -706,40 +673,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/echarts-5.3.2/src/core/impl.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/echarts-5.3.2/test/pie-calculable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ticket/createtask.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ticket/add_ticket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="98" column="66" selection-start-line="98" selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_website/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/echarts-5.3.2/src/core/impl.ts" />
+    <entry file="file://$PROJECT_DIR$/templates/echarts-5.3.2/test/pie-calculable.html" />
+    <entry file="file://$PROJECT_DIR$/app_website/admin.py" />
     <entry file="file://$PROJECT_DIR$/app_ticket/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -788,23 +724,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_usercenter/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app_usercenter/views.py" />
     <entry file="file://$PROJECT_DIR$/app_ticket/api/metrics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#119#159#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,9 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="32" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="e#118#163#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -822,11 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="e#117#128#0" expanded="true" />
-            <marker date="1653818657324" expanded="true" signature="682:683" ph="..." />
-            <marker date="1653818657324" expanded="true" signature="1339:1340" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,9 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding>
-            <element signature="e#117#163#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,10 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="17" column="24" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="e#117#128#0" expanded="true" />
-            <marker date="1653824779295" expanded="true" signature="2060:2358" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -879,30 +788,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_ticket/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6210">
-          <caret line="230" column="42" selection-start-line="230" selection-start-column="42" selection-end-line="230" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1653826623280" expanded="true" signature="716:734" ph="..." />
-            <marker date="1653826623280" expanded="true" signature="1050:1059" ph="..." />
-            <marker date="1653826623280" expanded="true" signature="1063:1072" ph="..." />
-            <marker date="1653826623280" expanded="true" signature="7005:7014" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjangoProject/footcar_wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjangoProject/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DjangoProject/footcar_wsgi.py" />
     <entry file="file://$PROJECT_DIR$/conf/main.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        <state relative-caret-position="783">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -911,15 +801,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2816">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-end-line="12" />
+        <state relative-caret-position="297">
+          <caret line="11" column="22" selection-start-line="11" selection-end-line="12" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DjangoProject/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/DjangoProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2078">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="3429">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
           <folding>
             <element signature="e#314#323#0" expanded="true" />
           </folding>
@@ -928,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DjangoProject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="540">
           <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
           <folding>
             <element signature="e#637#669#0" expanded="true" />
@@ -939,17 +832,44 @@
     <entry file="file://$PROJECT_DIR$/common/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_ticket/tools/rabbitmq.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="135" column="37" lean-forward="true" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
+        <state relative-caret-position="428">
+          <caret line="127" column="13" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
           <folding>
             <element signature="e#121#132#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_ticket/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ticket/add_ticket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="98" column="66" selection-start-line="98" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ticket/createtask.html.bk">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ticket/createtask.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="173" selection-start-line="173" selection-end-line="183" selection-end-column="24" />
         </state>
       </provider>
     </entry>

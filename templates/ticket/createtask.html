@@ -171,13 +171,18 @@ layui.use(['form', 'layedit', 'laydate'], function(){
     $(".addListBox").each(function(i,e){
 	    var str = $(e).find(".keyIpt").val();
 	    var val = $(e).find(".valIpt").val();
-	    if(val!="" && str!=""){
-		    eleObj={
-		    	host:str,
-		    	arg:val
-		    }
-		    arr.push(eleObj)
-	    }
+	    if(val==""){
+	        val='请按照帮助内容输入'
+        }
+        if(str==""){
+            str='请按照帮助内容输入'
+        }
+        eleObj={
+            host:str,
+            arg:val
+        };
+        arr.push(eleObj)
+
     })
     data.extra_params=JSON.stringify(arr);
 	$.ajax({
