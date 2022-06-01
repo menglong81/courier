@@ -249,7 +249,9 @@ table {
 td, th {
     font-size: 13px;
     line-height: 16px;
-    border-bottom: 1px solid #eee;
+    border: 1px solid #60626636;
+    border-top: 1px solid #60626636;
+    border-bottom: 1px solid #60626636;
     vertical-align: top;
     padding: 8px;
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
