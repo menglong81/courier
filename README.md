@@ -12,13 +12,13 @@
 
 Courier 是一个工单系统，它可以减少用户沟通成本，制定流程化和自动化标准的工具
 * 工单页
-![avatar](https://mini.xiaojiaokeji.cn/xyz/WechatIMG471.png)
+![avatar](http://rcyc0zoae.bkt.gdipper.com/WechatIMG471.png)
 * 模板创建
-![avatar](https://mini.xiaojiaokeji.cn/xyz/WechatIMG475.png)
+![avatar](http://rcyc0zoae.bkt.gdipper.com/WechatIMG475.png)
 * 工单创建
-![avatar](https://mini.xiaojiaokeji.cn/xyz/WechatIMG476.png)
+![avatar](http://rcyc0zoae.bkt.gdipper.com/WechatIMG476.png)
 * 使用分析
-![avatar](https://mini.xiaojiaokeji.cn/xyz/WechatIMG474.png)
+![avatar](http://rcyc0zoae.bkt.gdipper.com/WechatIMG474.png)
 
 ## 主要功能
 * 动态配置工单模板
@@ -26,6 +26,10 @@ Courier 是一个工单系统，它可以减少用户沟通成本，制定流程
 * 工单自动化配置
 * 工单使用行为统计, 分析统计
 
+## 注意
+* 项目暂未接入ldap等登陆方式 可自行接入 ldap认证通过后把用户加入到对应的组即可
+* 目前登陆走的还是django user中的登陆
+* 除了管理员有全局视图，每个用户都有自己的视图, 如需修改请在admin.py中修改
 
 ## 应用结构
 
@@ -91,10 +95,3 @@ Courier 是一个工单系统，它可以减少用户沟通成本，制定流程
             }
     }
     ```
-
-
-  
-
-
-
-
