@@ -46,7 +46,12 @@ Courier 是一个工单系统，它可以减少用户沟通成本，制定流程
 * static
     js/css
 
-## 安装手册
+## 安装方式1 docker启动 
+   ```
+   docker pull mageyoyo/courier:v1 
+   docker run -d -p 8080:8080 --name courier mageyoyo/courier:v1 
+   ```
+## 安装方式2 手动安装手册
 * 环境 Python:3.7+  pip:22.1.1
 * 支持的浏览器: chrome, Firefox
 * 安装virtualenv: `pip install virtualenv`
@@ -72,6 +77,7 @@ Courier 是一个工单系统，它可以减少用户沟通成本，制定流程
 * 登陆控制台
     ```
     http://127.0.0.1:8000/courier/admin
+    默认用户名: zhoumenglong 密码: adminadmin
     ```
 * 可增加Nginx配置
     ```
@@ -95,3 +101,4 @@ Courier 是一个工单系统，它可以减少用户沟通成本，制定流程
             }
     }
     ```
+   
