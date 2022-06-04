@@ -106,13 +106,13 @@ class Ticket(object):
         ticket_models.Ticket.objects.create(**_tmp)
 
         # TODO 增加rmq通知
-        # if kwargs.get('is_auto') == 0 and CONF['rmq_enable']:
-        #     publisher = RabbitmqPublisher()
-        #     publisher.connect()
-        #     publisher.confirm()
-        #     body = json.dumps(_tmp)
-        #
-        #     publisher.push(CONF['exchange'], CONF['routing_key'], body)
-        #     publisher.close()
+        if kwargs.get('is_auto') == 0 and CONF['rmq_enable']:
+            publisher = RabbitmqPublisher()
+            publisher.connect()
+            publisher.confirm()
+            body = json.dumps(_tmp)
+
+            publisher.push(CONF['exchange'], CONF['routing_key'], body)
+            publisher.close()
 
         return self.context
