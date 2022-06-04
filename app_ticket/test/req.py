@@ -16,7 +16,7 @@ def query_tpl():
     print(r.json())
 
 def query_all_g():
-    url = 'http://39.107.76.152:7777/courier/ticket/query_all_group'
+    url = 'http://127.0.0.1:7777/courier/ticket/query_all_group'
     r = requests.get(url)
     print(r.json())
 
@@ -37,7 +37,7 @@ def create_tpl():
     print(r.json())
 
 def create_ticket():
-    url = 'http://39.107.76.152:7777/courier/ticket/add_ticket'
+    url = 'http://127.0.0.1:7777/courier/ticket/add_ticket'
     detail = '''
     location ^~/static/ {	## 这里的root需要和路径结合使用，即是映射的文件位置为 /usr/alyingboy/static
     root /usr/alyingboy/; 
@@ -58,7 +58,6 @@ def create_ticket():
 
 
 def query_select_value():
-    #url = 'http://39.107.76.152:7777/courier/ticket/query_select_value'
     url = 'http://127.0.0.1:7777/courier/ticket/query_select_value'
     r = requests.get(url)
     print(r.json())
