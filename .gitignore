@@ -3,7 +3,7 @@
 # .ignore
 
 # https://github.com/github/gitignore
-
+.idea/
 __pycache__/
 *.py[cod]
 *$py.class
