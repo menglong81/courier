@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ebd8f3a-55fa-45a5-b83d-8043a12c6b55" name="Default Changelist" comment="" />
+    <list default="true" id="3ebd8f3a-55fa-45a5-b83d-8043a12c6b55" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,8 +149,9 @@
           <entry key="bk" value="1" />
           <entry key="conf" value="2" />
           <entry key="html" value="2" />
+          <entry key="map" value="1" />
           <entry key="md" value="1" />
-          <entry key="py" value="21" />
+          <entry key="py" value="22" />
           <entry key="sh" value="1" />
           <entry key="txt" value="1" />
           <entry key="yml" value="1" />
@@ -160,7 +164,8 @@
           <entry key="Logstash" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="21" />
+          <entry key="Python" value="22" />
+          <entry key="SourceMap" value="1" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -195,7 +200,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -205,6 +210,28 @@
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DjangoProject/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="136" column="50" lean-forward="true" selection-start-line="136" selection-start-column="50" selection-end-line="136" selection-end-column="50" />
+              <folding>
+                <element signature="e#314#323#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/courier/website/admin/simpleui-x/theme/orange.css.map">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="2052" selection-start-column="2052" selection-end-column="2052" />
+            </state>
+          </provider>
+          <provider editor-type-id="sourcemapFileViewerProvider" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -261,27 +288,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_ticket/tools/rabbitmq.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3348">
-              <caret line="127" column="13" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
-              <folding>
-                <element signature="e#121#132#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -294,9 +300,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>app_id</find>
-      <find>self.chan.</find>
-      <find>try</find>
       <find>__setitem__</find>
       <find>w</find>
       <find>ticket_type</find>
@@ -324,6 +327,9 @@
       <find>force</find>
       <find>destroy</find>
       <find>flag provided but not defined:</find>
+      <find>xiaojiaokeji</find>
+      <find>orange.css</find>
+      <find>theme</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -372,13 +378,13 @@
         <option value="$PROJECT_DIR$/DjangoProject/urls.py" />
         <option value="$PROJECT_DIR$/app_ticket/tools/rabbitmq.py" />
         <option value="$PROJECT_DIR$/templates/ticket/createtask.html" />
-        <option value="$PROJECT_DIR$/DjangoProject/settings.py" />
         <option value="$PROJECT_DIR$/app_ticket/admin.py" />
         <option value="$PROJECT_DIR$/conf/main.conf" />
         <option value="$PROJECT_DIR$/app_ticket/lib/ticket.py" />
         <option value="$PROJECT_DIR$/../../own_py_test/tf_test.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/DjangoProject/settings.py" />
       </list>
     </option>
   </component>
@@ -416,23 +422,7 @@
             <path>
               <item name="courier" type="b2602c69:ProjectViewProjectNode" />
               <item name="courier" type="462c0819:PsiDirectoryNode" />
-              <item name="app_ticket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courier" type="462c0819:PsiDirectoryNode" />
-              <item name="app_ticket" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courier" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courier" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
+              <item name="DjangoProject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -616,7 +606,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="83" y="25" width="1837" height="1055" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19832869" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -671,7 +660,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/css/layui.css" />
     <entry file="file://$PROJECT_DIR$/static/footcar/website/components/layui/js/layui.js" />
     <entry file="file://$PROJECT_DIR$/static/footcar/ticket/js/layui.js" />
     <entry file="file://$PROJECT_DIR$/static/footcar/website/admin/simpleui-x/elementui/element-ui.common.js" />
@@ -780,16 +768,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ticket/createtask.html.bk" />
-    <entry file="file://$PROJECT_DIR$/DjangoProject/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="119" column="15" selection-start-line="119" selection-start-column="15" selection-end-line="119" selection-end-column="15" />
-          <folding>
-            <element signature="e#314#323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/datetime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -950,6 +928,24 @@
             <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/courier/website/admin/simpleui-x/theme/orange.css.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2052" selection-start-column="2052" selection-end-column="2052" />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjangoProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="136" column="50" lean-forward="true" selection-start-line="136" selection-start-column="50" selection-end-line="136" selection-end-column="50" />
+          <folding>
+            <element signature="e#314#323#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
