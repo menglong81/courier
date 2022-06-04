@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ebd8f3a-55fa-45a5-b83d-8043a12c6b55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="3ebd8f3a-55fa-45a5-b83d-8043a12c6b55" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +168,7 @@
         <counts>
           <entry key="conf" value="9" />
           <entry key="html" value="74" />
-          <entry key="md" value="768" />
+          <entry key="md" value="806" />
           <entry key="py" value="837" />
           <entry key="yml" value="27" />
         </counts>
@@ -181,7 +177,7 @@
         <counts>
           <entry key="HTML" value="74" />
           <entry key="Logstash" value="9" />
-          <entry key="Markdown" value="768" />
+          <entry key="Markdown" value="806" />
           <entry key="Python" value="837" />
           <entry key="YAML" value="27" />
         </counts>
@@ -203,8 +199,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="594">
-                <caret line="79" column="29" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="29" />
+              <first_editor relative-caret-position="378">
+                <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               </first_editor>
               <second_editor />
             </state>
@@ -622,7 +618,7 @@
     <frame x="83" y="25" width="1837" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19832869" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19832869" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -636,7 +632,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3296328" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2763018" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2763018" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32978722" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32972974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -950,8 +946,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="594">
-            <caret line="79" column="29" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="29" />
+          <first_editor relative-caret-position="378">
+            <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           </first_editor>
           <second_editor />
         </state>

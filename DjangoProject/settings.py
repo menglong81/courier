@@ -126,7 +126,7 @@ USE_TZ = False
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media", APP_NAME)
 MEDIA_URL = "/media/%s/" % APP_NAME
-SIMPLEUI_DEFAULT_THEME = 'orange.css'
+SIMPLEUI_DEFAULT_THEME = 'admin.lte.css'
 
 
 if DEBUG is True:
