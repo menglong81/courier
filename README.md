@@ -56,6 +56,7 @@ Courier 是一个工单系统，它可以减少用户沟通成本，制定流程
 * 支持的浏览器: chrome, Firefox
 * 安装virtualenv: `pip install virtualenv`
 * 项目克隆
+* 注意 如果选择sqlite3为数据库需要升级版本>3.8.3 docker安装方式已经编译好进dockerfile了
 * 依赖安装
     ```
     pip3.7 install -r requirements/requirements_unix.txt
